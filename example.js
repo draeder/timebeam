@@ -3,7 +3,7 @@ const Timebeam = require('timebeam')
 let timebeam = new Timebeam({
   secret: 'some super secret secret', 
   topic: 'some secure topic identifier',
-  serverPort: 22,
+  serverPort: 8040,
   clientPort: 8041
 })
 
