@@ -11,7 +11,7 @@ Timebeam is minimally viable level as of this version.
 
 # Example
 ```js
-const Timebeam = require('./server')
+const Timebeam = require('timebeam')
 
 let timebeam = new Timebeam({
   secret: 'some super secret secret', 
