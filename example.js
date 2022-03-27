@@ -1,23 +1,10 @@
-# timebeam
-> A TOTP constrained 1:1 secure tunnel built on hyperbeam
-
-![Timebeam example](assets/example.png)
-
-## Status: WIP
-Timebeam is minimally viable level as of this version.
-
-# Install
-`npm i timebeam`
-
-# Example
-```js
 const Timebeam = require('./server')
 
 let timebeam = new Timebeam({
   secret: 'some super secret secret', 
   topic: 'some secure topic identifier',
-  clientPort: 8040,
-  serverPort: 8041
+  serverPort: 8040,
+  clientPort: 8041
 })
 
 timebeam.on('connected', (timebeam)=>{
@@ -37,4 +24,4 @@ process.stdout.on('data', data => {
 
 // Telnet to the client port to send messages to the server
 // Telnet to the server port to send messages to the client
-```
+
