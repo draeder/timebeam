@@ -4,14 +4,15 @@
   "description": "A TOTP constrained secure tunnel built on hyperbeam",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/draeder/timebeam.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Daniel Raeder",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/draeder/timebeam/issues"
   },
@@ -21,5 +22,15 @@
     "hi-base32": "^0.5.1",
     "hyperbeam": "^2.0.1",
     "hyperswarm": "^3.0.3"
-  }
+  },
+  "devDependencies": {},
+  "keywords": [
+    "p2p",
+    "vpn",
+    "ipsec",
+    "decentralized",
+    "timebeam",
+    "hyperbeam",
+    "hyperswarm"
+  ]
 }
