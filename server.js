@@ -110,7 +110,7 @@ const Timebeam = function(opts){
   })
 
   process.on('uncaughtException', function (err) {
-    if(err.code === ('EPIPE' || 'ECONNRESET')) {
+    if(err.code === 'EPIPE' || err.code === 'ECONNRESET' || err.code === 'ENOTCONN'){
       peerCount--
       beamCount--
       if(peerCount === 0){
