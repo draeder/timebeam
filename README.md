@@ -1,4 +1,4 @@
-# timebeam
+# Timebeam
 > A TOTP constrained 1:1 secure tunnel built on hyperbeam
 
 ![Timebeam example](assets/example.png)
