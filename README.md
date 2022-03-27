@@ -38,3 +38,9 @@ process.stdout.on('data', data => {
 // Telnet to the client port to send messages to the server
 // Telnet to the server port to send messages to the client
 ```
+
+# Todo
+- Add reconnection logic on failed / dropped connections
+- Add SSH support
+- Add additional discovery mechanisms and transports (Gun, WebTorrent)
+- Add browser support
