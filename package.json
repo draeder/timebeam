@@ -1,6 +1,6 @@
 {
   "name": "timebeam",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A TOTP constrained secure tunnel built on hyperbeam",
   "main": "server.js",
   "scripts": {
