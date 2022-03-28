@@ -13,11 +13,11 @@ timebeam.on('connected', (timebeam)=>{
 timebeam.on('close', ()=>{
   console.log('Timebeam closed')
 })
+
+// Simple terminal chat app
 timebeam.on('data', data => {
   console.log(data)
 })
-
-// Simple terminal chat app
 process.stdout.on('data', data => {
   timebeam.send(data)
 })
