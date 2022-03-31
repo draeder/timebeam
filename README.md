@@ -31,7 +31,7 @@ timebeam.on('close', ()=>{
 timebeam.on('data', data => {
   console.log(data)
 })
-process.stdout.on('data', data => {
+process.stdin.on('data', data => {
   timebeam.send(data)
 })
 
