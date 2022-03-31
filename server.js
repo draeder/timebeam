@@ -12,8 +12,18 @@ const Timebeam = function(opts){
   timebeam.send = {}
   timebeam.emit = events.emit.bind(events)
   timebeam.on = events.on.bind(events)
+  let beamCount = 0
   let secret = opts && opts.secret ? base32.encode(opts.secret) : authenticator.generateSecret()
   let swarmTopic = crypto.createHash('sha256').update(authenticator.generate(secret)+opts.topic).digest()
+  let interval = setInterval(()=>{
+    let sec = new Date().getSeconds()
+    if(sec === 0 || sec === 30){
+      swarmTopic = crypto.createHash('sha256').update(authenticator.generate(secret)+opts.topic).digest()
+    }
+  }, 1000)
+  timebeam.on('connected', () => {
+    clearInterval(interval)
+  })
   let key
   if(opts.key) key = opts.key
 
@@ -59,7 +69,6 @@ const Timebeam = function(opts){
     })
   })
   swarm.join(swarmTopic)
-  let beamCount = 0
   timebeam.on('beamReady', (topic) => {
     beam = new Hyperbeam(topic ? topic: undefined)
     beam.on('connected', ()=> {
